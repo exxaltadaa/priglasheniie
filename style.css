@@ -10,4 +10,19 @@ img{
     background:black;
     max-width:500px;
     margin:auto;
+
     }
+html{
+scroll-behavior:smooth;
+scroll-snap-type:y mandatory;
+}
+
+.section{
+position:relative;
+scroll-snap-align:start;
+}
+
+.section img{
+width:100%;
+display:block;
+}
