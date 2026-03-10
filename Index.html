@@ -56,16 +56,39 @@ target="_blank">
 <img src="4.png">
 </div>
 
-<audio id="music" loop>
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
-  
-  <script>
-  document.addEventListener("click", function() {
-    const music = document.getElementById("music");
-    music.play();
-  }, { once: true });
-  </script>
+<audio id="music" autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+
+const music = document.getElementById("music");
+music.volume = 0;
+
+function startMusic() {
+
+  music.play().catch(()=>{});
+
+  let volume = 0;
+  const maxVolume = 0.2; // максимальная громкость (20%)
+
+  const fade = setInterval(() => {
+    if(volume < maxVolume){
+      volume += 0.01;
+      music.volume = volume;
+    } else {
+      clearInterval(fade);
+    }
+  }, 120);
+
+}
+
+window.addEventListener("load", startMusic);
+document.addEventListener("click", startMusic, { once:true });
+document.addEventListener("scroll", startMusic, { once:true });
+
+</script>
 
 </body>
 </html>
+
