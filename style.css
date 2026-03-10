@@ -10,30 +10,19 @@ img{
     background:black;
     max-width:500px;
     margin:auto;
-
     }
-html{
-scroll-behavior:smooth;
-scroll-snap-type:y mandatory;
-}
 
-.section{
-position:relative;
-scroll-snap-align:start;
-}
-
-.section img{
-width:100%;
-display:block;
-}
-.calendar-button{
-position:absolute;
-left:25%;
-top:75%;
-width:50%;
-height:12%;
-background:red;
-opacity:0.3;    
-}
-
-
+    html{
+      scroll-behavior:smooth;
+      scroll-snap-type:y mandatory;
+      }
+      
+      .section{
+      position:relative;
+      scroll-snap-align:start;
+      }
+      
+      .section img{
+      width:100%;
+      display:block;
+      }
