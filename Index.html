@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+
 body{
 margin:0;
 background:black;
@@ -54,18 +56,16 @@ target="_blank">
 <img src="4.png">
 </div>
 
-  <audio id="music" loop>
-  <source src="music.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-document.addEventListener("click", function() {
-  const music = document.getElementById("music");
-  music.play();
-}, { once: true });
-</script>
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
   
+  <script>
+  document.addEventListener("click", function() {
+    const music = document.getElementById("music");
+    music.play();
+  }, { once: true });
+  </script>
+
 </body>
-
 </html>
-
